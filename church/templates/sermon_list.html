@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Sermons</h2>
+
+  <!-- Search form -->
+  <form method="GET" action="{% url 'users:sermon_list' %}">
+    <input type="text" name="title" placeholder="Title" value="{{ request.GET.title }}">
+    <input type="date" name="date" placeholder="Date" value="{{ request.GET.date }}">
+    <input type="text" name="speaker" placeholder="Speaker" value="{{ request.GET.speaker }}">
+    <button type="submit">Search</button>
+  </form>
+
+  <ul class="sermon-list">
+    {% for sermon in sermons %}
+      <li>
+        <h3>{{ sermon.title }}</h3>
+        <p>{{ sermon.date }}</p>
+        <p>{{ sermon.speaker }}</p>
+        <div class="video-container">
+          <video controls>
+            <source src="{{ sermon.file.url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </li>
+    {% empty %}
+      <li>No sermons available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

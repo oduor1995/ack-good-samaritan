@@ -1,0 +1,16 @@
+<!-- add_member_to_group.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Member to Group</title>
+</head>
+<body>
+    <h2>Add Member to Group</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Member</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<h1>Group Detail: {{ group.name }}</h1>
+
+<h2>Members:</h2>
+<ul>
+  {% for member in members %}
+    <li>{{ member.first_name }} {{ member.last_name }} ({{ member.phone_number }})</li>
+  {% empty %}
+    <li>No members found.</li>
+  {% endfor %}
+</ul>

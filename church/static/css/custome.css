@@ -1,0 +1,125 @@
+/* custom.css */
+
+/* Navbar */
+.navbar {
+  background-color: #f8f9fa; /* Light gray background */
+  border-bottom: 1px solid #e9ecef; /* Gray border at the bottom */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #343a40; /* Dark gray text color */
+}
+
+.nav-link {
+  color: #343a40 !important; /* Dark gray text color */
+}
+
+.nav-link:hover {
+  color: #0056b3 !important; /* Blue text color on hover */
+}
+
+/* Container */
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #343a40; /* Dark gray heading color */
+}
+
+/* Paragraphs */
+p {
+  color: #6c757d; /* Medium gray text color */
+  line-height: 1.5;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #007bff; /* Blue button background */
+  border-color: #007bff; /* Blue button border */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue button background on hover */
+  border-color: #0056b3; /* Darker blue button border on hover */
+}
+
+/* Images */
+img {
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  /* Adjust styles for mobile devices */
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+}
+.home {
+  background-color: red;
+  color: red;
+}
+body {
+  background-image: url('{% static "images/favicons/My project.png" %}');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Added for sermons video responsiveness */
+
+.dropdown-menu-color {
+  background-color: #f8f9fa; /* Replace with your desired background color */
+}
+
+/* Styles for the video container */
+.video-container {
+  max-width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Additional styles for the sermons list */
+.sermon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sermon-list li {
+  margin-bottom: 20px;
+}
+
+.sermon-list h3 {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.sermon-list p {
+  margin: 5px 0;
+}

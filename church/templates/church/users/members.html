@@ -1,0 +1,22 @@
+<h1>Members</h1>
+
+<!-- Search form for member names -->
+<form method="GET" action="{% url 'users:members' %}">
+  <input type="text" name="search_query" placeholder="Search members by name">
+  <button type="submit">Search</button>
+</form>
+
+<ul>
+  {% for member in members %}
+    <li><a href="{% url 'users:member_detail' member_id=member.id %}">{{ member.first_name }} {{ member.last_name }}</a> - {{ member.phone_number }}</li>
+  {% empty %}
+    <li>No members found.</li>
+  {% endfor %}
+</ul>
+
+<h2>Add Member</h2>
+<form method="POST" action="{% url 'users:members' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add</button>
+</form>

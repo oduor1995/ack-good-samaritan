@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Member Detail</title>
+</head>
+<body>
+    <h1>Member Detail</h1>
+    <ul>
+        <li>Name: {{ member.first_name }} {{ member.last_name }}</li>
+        <li>Email: {{ member.email }}</li>
+        <li>Phone Number: {{ member.phone_number }}</li>
+        <li>Marital Status: {{ member.marital_status }}</li>
+        <li>Occupation: {{ member.occupation }}</li>
+        <li>Next of Kin: {{ member.next_of_kin }}</li>
+        <li>Groups: {% if member.groups.all %}{% for group in member.groups.all %}{{ group.name }}{% if not forloop.last %}, {% endif %}{% endfor %}{% else %}None{% endif %}</li>
+    </ul>
+
+    <!-- Add any other content or formatting as needed -->
+</body>
+</html>

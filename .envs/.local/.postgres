@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=church
+POSTGRES_USER=uzvaCmFggknPbrIjeYjAUYkXbTHLIWOu
+POSTGRES_PASSWORD=MkOCqz9qDFhK2bRP5puTlJCwzGdnB1v8pJJas8LlHPhivmtDBSMFH07rWlwYZoif
